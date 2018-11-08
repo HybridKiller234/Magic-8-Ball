@@ -10,33 +10,24 @@ name = input()
 print(' ')
 print('Hello ' + name)
 
-
-
 def Magic8Ball():
-    print('')
-    print("Ask me a question. I promise i'll answer it.")
-    input()
-    print('')
-    print (answers[random.randint(0, len(answers)-1)] )
-    Replay()
+    question = input("\nAsk me a question, I promise i'll answer it!: ")
+    if question == '' or question == None:
+        print("You gotta tell me something!")
+    else:
+        print('')
+        print(answers[random.randint(0, len(answers)-1)])
+        replay()
 
-def Replay():
-    print(' ')
-    print("Anything else I can help you with, " + name,"?")
-    print(" ")
-    print("[y/n]")
-
-    # Yes or no
-    reply=input()
-
-    if reply == 'y':
+def replay():
+    question2 = input("\nAnything else I can help you with, %s" % name + "? yes or no: \n")
+    if question2 == 'y' or question2 == 'yes':
         Magic8Ball()
-    elif reply == 'n':
+    elif question2 == 'n' or question2 == 'no':
         exit()
     else:
         print("What was that?")
-        Replay()
-        
+        return -1
         
 Magic8Ball()
 
