@@ -14,6 +14,9 @@ def Magic8Ball():
     question = input("\nAsk me a question, I promise i'll answer it!: ")
     if question == '' or question == None:
         print("You gotta tell me something!")
+    elif question == 'question':
+        print("\nOh I get it. We're doing that. \nLets try again.")
+        Magic8Ball()
     else:
         print('')
         print(answers[random.randint(0, len(answers)-1)])
@@ -27,8 +30,6 @@ def replay():
         exit()
     else:
         print("What was that?")
-        return -1
-        
+        replay()
+
 Magic8Ball()
-
-
