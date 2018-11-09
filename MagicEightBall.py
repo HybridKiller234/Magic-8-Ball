@@ -2,7 +2,6 @@ import random
 
 answers = ['Yes', 'No', 'I believe so', 'I believe not', 'No, you idiot', 'Sure, why not?']
 
-#When app is first ran
 print("Hello! \nThis is the 8-Ball from your most wild of dreams. \nWhat is your name?")
 
 name = input()
